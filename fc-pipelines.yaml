@@ -1,7 +1,7 @@
 apiVersion: "1.0.4"
 namespace: poc-pipelines
 createNamespace: true
-customLabels: "smc.cypress=true"
+customLabels: "smc.cypress-secrets-secrets=true"
 
 configuration:
   gitCredentialsSecret: github-credentials
