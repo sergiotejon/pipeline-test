@@ -1,7 +1,7 @@
 apiVersion: "1.0.4"
 namespace: poc-pipelines
-#createNamespace: true
-#customLabels: "smc.cypress=true smc.elque=nose"
+createNamespace: true
+customLabels: "smc.cypress=true"
 
 configuration:
   gitCredentialsSecret: github-credentials
@@ -9,13 +9,13 @@ configuration:
   sendmailSender: jarvis@freepik.com
   configuration.artifactsEnabled: false
   cloneDepth: 20
-  #  nodeSelector:
-  #    machine_type: n2d-standard-4
-  #  tolerations:
-  #  - key: "type"
-  #    operator: "Equal"
-  #    value: "pipelines"
-  #    effect: "NoSchedule"
+  nodeSelector:
+    machine_type: n2d-standard-4
+  tolerations:
+  - key: "type"
+    operator: "Equal"
+    value: "pipelines"
+    effect: "NoSchedule"
 
 echo: &echo
   description: just a test step
